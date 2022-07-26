@@ -1,0 +1,272 @@
+import java.util.Scanner;
+
+public class quest01 {
+
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int opcao;
+	double Soma, raiz, num1, num2, num3;
+	System.out.print("Menu de opções:\n1 - Soma dois números\n2 - Raíz quadrada de um número\n--> ");
+	opcao = sc.nextInt();
+
+	if (opcao == 1) {
+		System.out.print("Informe um número: ");
+		num1 = sc.nextDouble();
+		System.out.print("Informe um número: ");
+		num2 = sc.nextDouble();
+		Soma = num1 + num2;
+		System.out.println("Soma: " + Soma);
+	} else {
+		System.out.print("Informe um número: ");
+		num3 = sc.nextDouble();
+		raiz = Math.sqrt(num3);
+		System.out.println("Raíz: " + raiz);
+	}
+	sc.close();
+}
+}
+—————————————————————
+2- import java.util.Scanner;
+
+public class quest02 {
+
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int mes, ano, dia, hora, min;
+	System.out.print("Informe o ano:");
+	ano = sc.nextInt();
+	System.out.print("Informe o mês: ");
+	mes = sc.nextInt();
+	System.out.print("Informe o dia: ");
+	dia = sc.nextInt();
+	System.out.print("Informe as horas: ");
+	hora = sc.nextInt();
+	System.out.print("Informe os minutos: ");
+	min = sc.nextInt();
+	if(mes == 1) {
+		System.out.println(dia+"º de Janeiro de"+ano+" - "+hora+":"+min);
+	}else if(mes == 2) {
+		System.out.println(dia+"º de Fevereiro de"+ano+" - "+hora+":"+min);
+	}else if(mes == 3) {
+		System.out.println(dia+"º de Março de"+ano+" - "+hora+":"+min);
+	}else if(mes == 4) {
+		System.out.println(dia+"º de Abril de"+ano+" - "+hora+":"+min);
+	}else if(mes == 5) {
+		System.out.println(dia+"º de Maio de"+ano+" - "+hora+":"+min);
+	}else if(mes == 6) {
+		System.out.println(dia+"º de Junho de"+ano+" - "+hora+":"+min);
+	}else if(mes == 7) {
+		System.out.println(dia+"º de Julho de"+ano+" - "+hora+":"+min);
+	}else if(mes == 8) {
+		System.out.println(dia+"º de Agosto de"+ano+" - "+hora+":"+min);
+	}else if(mes == 9) {
+		System.out.println(dia+"º de Setembro de"+ano+" - "+hora+":"+min);
+	}else if(mes == 10) {
+		System.out.println(dia+"º de Outubro de"+ano+" - "+hora+":"+min);
+	}else if(mes == 11) {
+		System.out.println(dia+"º de Novembro de"+ano+" - "+hora+":"+min);
+	}else if(mes == 12) {
+		System.out.println(dia+"º de Dezembro de"+ano+" - "+hora+":"+min);
+	}else {
+		System.out.println("Data inválida");
+	}
+	sc.close();
+}
+}
+—————————————————————
+3- import java.util.Scanner;
+
+public class quest03 {
+
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int mes1, ano1, dia1, mes2, ano2, dia2;
+	System.out.print("Informe um ano:");
+	ano1 = sc.nextInt();
+	System.out.print("Informe um mês: ");
+	mes1 = sc.nextInt();
+	System.out.print("Informe um dia: ");
+	dia1 = sc.nextInt();
+	System.out.print("Informe outro ano:");
+	ano2 = sc.nextInt();
+	System.out.print("Informe outro mês: ");
+	mes2 = sc.nextInt();
+	System.out.print("Informe outro dia: ");
+	dia2 = sc.nextInt();
+
+	if (ano1 > ano2) {
+		if (mes1 > mes2) {
+			if (dia1 > dia2) {
+				System.out.print("Data: " + dia1 + "/" + mes1 + "/" + ano1);
+			} else {
+				System.out.print("Data: " + dia1 + "/" + mes1 + "/" + ano1);
+			}
+		} else {
+			System.out.print("Data: " + dia1 + "/" + mes1 + "/" + ano1);
+		}
+	} else if (ano2 > ano1) {
+		if (mes2 > mes2) {
+			if (dia2 > dia1) {
+				System.out.print("Data: " + dia2 + "/" + mes2 + "/" + ano2);
+			} else {
+				System.out.print("Data: " + dia2 + "/" + mes2 + "/" + ano2);
+			}
+		} else {
+			System.out.print("Data: " + dia2 + "/" + mes2 + "/" + ano2);
+		}
+	} else if (ano1 == ano2) {
+		if (mes1 > mes2) {
+			if (dia1 > dia2) {
+				System.out.print("Data: " + dia1 + "/" + mes1 + "/" + ano1);
+			}
+		} else if (mes1 == mes2) {
+			if (dia1 > dia2) {
+				System.out.print("Data: " + dia1 + "/" + mes1 + "/" + ano1);
+			} else {
+				System.out.print("Data: " + dia2 + "/" + mes2 + "/" + ano2);
+			}
+		} else {
+			System.out.print("Data: " + dia2 + "/" + mes2 + "/" + ano2);
+		}
+	}
+	sc.close();
+}
+}
+------------------------------------------------------------------------
+4- import java.util.Scanner;
+
+public class quest04 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int hora, min, hora1, min1, horafim, minfim;
+
+		System.out.print("Informe a hora de início: ");
+		hora = sc.nextInt();
+		System.out.print("Informe o minuto de início: ");
+		min = sc.nextInt();
+		System.out.print("Informe a hora de término: ");
+		hora1 = sc.nextInt();
+		System.out.print("Informe o minuto de término: ");
+		min1 = sc.nextInt();
+
+		horafim = hora1 - hora;
+		minfim = min1 - min;
+		if (horafim > 24) {
+			System.out.println("Passou do limite de tempo!");
+		} else {
+			if (minfim > 0) {
+				System.out.println("Tempo: " + horafim + " horas e " + minfim + " minutos");
+			} else {
+				System.out.println("Tempo: " + horafim + " horas e " + (-minfim) + " minutos");
+			}
+		}
+		sc.close();
+	}
+
+}
+-----------------------------------------------------------------------
+5- import java.util.Scanner;
+
+public class quest05 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int cod;
+		double reajuste, salar, valor;
+		System.out.println("|----|-----------------|");
+		System.out.println("| 1  |   Escriturário  |");
+		System.out.println("| 2  |    Secretário   |");
+		System.out.println("| 3  |      Caixa      |");
+		System.out.println("| 4  |     Gerente     |");
+		System.out.println("| 5  |     Diretor     |");
+		System.out.println("|----|-----------------|");
+		System.out.print("Informe o código do seu cargo: ");
+		cod = sc.nextInt();
+		System.out.print("Informe o seu salário: ");
+		salar = sc.nextInt();
+		if (cod == 1) {
+			valor = salar * 0.5;
+			reajuste = salar + valor;
+			System.out.println("Seu salário atual: " + salar + "\nSeu cargo: Escriturário\nValor do seu aumento: "
+					+ valor + "\nSeu novo salário: " + reajuste);
+		} else if (cod == 2) {
+			valor = salar * 0.35;
+			reajuste = salar + valor;
+			System.out.println("Seu salário atual: " + salar + "\nSeu cargo: Secretário\nValor do seu aumento: "
+					+ valor + "\nSeu novo salário: " + reajuste);
+		} else if (cod == 3) {
+			valor = salar * 0.2;
+			reajuste = salar + valor;
+			System.out.println("Seu salário atual: " + salar + "\nSeu cargo: Caixa\nValor do seu aumento: "
+					+ valor + "\nSeu novo salário: " + reajuste);
+		} else if (cod == 4) {
+			valor = salar * 0.1;
+			reajuste = salar + valor;
+			System.out.println("Seu salário atual: " + salar + "\nSeu cargo: Gerente\nValor do seu aumento: "
+					+ valor + "\nSeu novo salário: " + reajuste);
+		} else if (cod == 5) {
+			System.out.println("Seu salário atual: " + salar+"\n Voçê é diretor e não possui um aumento");
+		}
+		sc.close();
+	}
+
+}
+----------------------------------------------------------
+6-import java.util.Scanner;
+
+public class quest06 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int opcao;
+		double salar, imposto;
+
+		System.out.print("Menu de Opções:\n1 - Imposto\n2 - Novo Salário\n3 - Classificação\n--> ");
+		opcao = sc.nextInt();
+
+		if (opcao == 1) {
+			System.out.print("Informe seu salário atual: ");
+			salar = sc.nextDouble();
+				if(salar < 500) {
+					imposto = salar * 0.05;
+					System.out.print("O valor do imposto é de: "+imposto);
+				}else if(salar >= 500 && salar <= 850) {
+					imposto = salar * 0.1;
+					System.out.print("O valor do imposto é de: "+imposto);
+				}else {
+					imposto = salar * 0.15;
+					System.out.print("O valor do imposto é de: "+imposto);
+				}
+		} else if (opcao == 2) {
+			System.out.print("Informe seu salário atual: ");
+			salar = sc.nextDouble();
+			if (salar > 1500) {
+				salar += 25;
+				System.out.print("Seu novo salário é de: " + salar);
+			} else if (salar >= 750 && salar <= 1500) {
+				salar += 50;
+				System.out.print("Seu novo salário é de: " + salar);
+			} else if(salar >= 450 && salar <= 750){
+				salar += 75;
+				System.out.print("Seu novo salário é de: " + salar);
+			}else if(salar < 450){
+				salar += 100;
+				System.out.print("Seu novo salário é de: " + salar);
+			}
+		} else {
+			System.out.print("Informe seu salário atual: ");
+			salar = sc.nextDouble();
+			if(salar <= 700) {
+				System.out.println("Mal remunerado");
+			}else {
+				System.out.println("Bem remunerado");
+			}
+		}
+		sc.close();
+
+	}
+
+}
