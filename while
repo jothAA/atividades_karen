@@ -1,0 +1,155 @@
+import java.util.Scanner;
+public class jot1 {
+
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        
+	        int i=1;
+	        
+	        System.out.println("Informe o salário do Carlos: ");
+	        double salCarlos = sc.nextDouble();
+	        
+	        double salJoao = salCarlos/3;
+	        
+	        System.out.println("Salário do João é igual a: " + salJoao);
+	        
+	        double rendCarlos = (salCarlos*0.02+salCarlos);
+	        double rendJoao =(salJoao*0.05+salJoao);
+	        
+	    
+	        while (rendJoao<rendCarlos) {
+	            rendJoao =(rendJoao*0.05+rendJoao);
+	            rendCarlos = (rendCarlos*0.02+rendCarlos);
+	            i++;
+	        }
+	        
+	        System.out.println("Meses = " + i);
+	        
+	        sc.close();
+	    }
+}
+-------------------------------------------------------------
+import java.util.Scanner;
+
+public class jot2 {
+	
+		public static void main(String[] args) {
+			
+		Scanner Sc = new Scanner(System.in);
+		
+		double num;
+		
+		System.out.println("Insira um número: ");
+		num = Sc.nextInt();
+		
+		while (num > 0) {
+			
+			System.out.println("\nNúmero: " + num + "\nQuadrado: " + Math.pow(num, 2) + "\nCubo: " + Math.pow(num, 3) + 
+					"\nRaiz quadrada: " + Math.sqrt(num) + "\nInsira outro número ou encerre com um valor menor ou igual a 0: ");
+			num = Sc.nextInt();
+		}
+		
+		Sc.close();
+		}
+		
+		}
+-----------------------------------------------------------------------
+import java.util.Scanner;
+public class jot3 {
+
+	
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        
+	        int num, i =0, qtdNum=0, somaNum = 0, par=0, mediaPar=0, impar=0, soma=0;
+	    
+	        int numMaior = 0;
+	        int numMenor = 0;
+
+	        do {
+	            System.out.println("Informe um número: ");
+	            num = sc.nextInt();
+	            
+	            soma = soma +num;
+	            i = i + 1;
+	            
+	            if (num%2==0) {
+	                mediaPar = mediaPar +num;
+	                par++;
+	            }
+	            
+	            if (num<numMenor && num !=0) {
+	                numMenor = num;
+	            }
+	            
+	            if (num> numMaior) {
+	                numMaior = num;
+	            }
+	            
+	            if (num==0) {
+	                i--;
+	                par--;
+	            }
+	            
+	        } while (num<30.000);
+	        
+	        int media = soma/i;
+	        mediaPar = mediaPar/par;
+	        
+	        System.out.println("Soma: " + soma);
+	        System.out.println("Quantidade de números digitados: " + i);
+	        System.out.println("Maior número digitado: " + numMaior);
+	        System.out.println("Menor número digitado: " + numMenor);
+	        System.out.println("Média dos números pares: " + media); 
+	    }
+
+}
+-----------------------------------------------
+import java.util.Scanner;
+
+public class jot4{
+
+			    public static void main(String[] args) {
+		       
+			    	Scanner sc = new Scanner(null);
+		        
+		        double salarioMinimo;
+		        double quilowatts;
+		        
+		        System.out.println("Tipo   | % DE ACRÉSCIMO SOBRE O VALOR GASTO");
+		        System.out.println("1      |               5%");
+		        System.out.println("2      |              10%");
+		        System.out.println("3      |              15%");
+		        
+		            System.out.println("Digite o salario:");
+		            salarioMinimo = sc.nextInt();
+		            
+		            quilowatts = salarioMinimo/8;
+		            
+		            System.out.println("O valor do quilowatt:R$"+quilowatts);
+		            
+		            //residencial
+		            double residencial = salarioMinimo*0.05;
+		            System.out.println("O valor de acrescimo e:R$"+residencial);
+		            
+		            //comercial
+		            double comercial = salarioMinimo*0.10;
+		            System.out.println("O valor de acrescimo do comercial é:R$"+comercial);
+		            
+		            //industrial
+		            double industrial = salarioMinimo*0.15;
+		            System.out.println("O valor de acrescimo do industrial é:R$"+industrial);
+		            
+		            //faturamento geral
+		            double fatGeral = residencial + comercial + industrial;
+		            System.out.println("Faturamento geral da empresa:R$"+fatGeral);
+		            
+		            sc.close();
+		    }
+
+		
+
+	}
+
+
+
