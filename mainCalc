@@ -1,0 +1,22 @@
+package Calculadora;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner (System.in);
+		
+		Calculadora calc = new Calculadora();
+		
+		calc.ligar();
+		calc.entrada();
+		calc.calcula();
+			
+		sc.close();
+		
+
+	}
+
+}
