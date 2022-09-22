@@ -1,4 +1,4 @@
-package operacao;
+package calc;
 
 import java.util.Scanner;
 
