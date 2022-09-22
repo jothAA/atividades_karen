@@ -1,0 +1,76 @@
+package operacao;
+
+import java.util.Scanner;
+
+public class Calculadora {
+	static Scanner sc = new Scanner(System.in);
+	boolean bateria = true;
+	boolean ligada = false;
+	String tela = "Resultado: ";
+	int operacao;
+	double num;
+	double num1;
+	double num2;
+
+	void ligar() {
+		if (bateria && !ligada) {
+			ligada = true;
+		} else if (bateria && ligada) {
+			System.out.println("Já está ligada");
+		} else {
+			System.out.println("Sem bateria!");
+		}
+	}
+
+	void entrada() {
+		if (ligada) {
+			
+			System.out.println("Selecione a operação que deseja: " + "\n1 - Adição" + "\n2 - Subtração"
+					+ "\n3 - Multiplicação" + "\n4- Divisão" + "\n5 - Potencia" + "\n6 - Raiz");
+			operacao = sc.nextInt();
+			System.out.println("Insira um número: ");
+			num1 = sc.nextDouble();
+			System.out.println("Insira outro número: ");
+			num2 = sc.nextDouble();
+			
+		
+		} else {
+			System.out.println("Por favor, você deve ligar a calculadora!");
+		}
+	}
+
+	void calcula() {
+		switch (operacao) {
+		case 1:
+			tela += num1 + num2;
+			break;
+		case 2:
+			tela += num1 - num2;
+			break;
+		case 3:
+			tela += num1 * num2;
+			break;
+		case 4:
+			tela += num1 / num2;
+			break;
+		case 5:
+			tela += Math.pow(num1, num2);
+			break;
+		case 6:
+			tela += Math.sqrt(num);
+			break;
+		default:
+			tela = "Operação Inválida!!!";
+		}
+		
+		saida();
+	}
+
+	void saida() {
+		System.out.println(tela);
+	}
+
+	
+	}
+
+
